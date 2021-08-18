@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.error{
+    background-color:brown;
+    color:white;
+}
+
+.success{
+    background-color:rgb(22, 196, 80);
+    color:white;
+}
+
+.warning{
+    background-color:rgb(209, 198, 38);
+    color:white;
+}
+
+.info{
+    background-color:rgb(32, 167, 201);
+    color:white;
+}
+
+.w-100-p{
+    width: 100%;
+}
+
+.w-50-p{
+    width: 50%;
+}
+
+.p-5{
+    padding:5px;
+}
+
+.float-right{
+    float: right;
+}
+
+.m-8{
+    margin:8px;
+}

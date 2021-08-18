@@ -1,0 +1,47 @@
+<h1 mat-dialog-title>{{title}}</h1>
+<form [formGroup]="studentForm" (ngSubmit)="submit()">
+<div mat-dialog-content *ngIf="studentForm">
+  
+    <div fxLayout="row" fxLayoutGap="5px" fxLayout.sm="column" fxLayout.xs="column">
+      <mat-form-field fxFlex.gt-sm="50" fxFlex.lt-lg="" appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input  formControlName="firstName" matInput placeholder="First Name">
+      </mat-form-field>
+      <mat-form-field fxFlex.gt-sm="50" fxFlex.lt-lg="" appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input formControlName="lastName" matInput placeholder="Last Name">
+      </mat-form-field>
+    </div>
+    <div fxLayout="row" fxLayoutGap="5px" fxLayout.sm="column" fxLayout.xs="column">
+      <mat-form-field fxFlex.gt-sm="50" fxFlex.lt-lg="" appearance="outline">
+        <mat-label>Father's Name</mat-label>
+        <input formControlName="fatherName" matInput placeholder="Father's Name">
+      </mat-form-field>
+      <mat-form-field fxFlex.gt-sm="50" fxFlex.lt-lg="" appearance="outline">
+        <mat-label>Mother's Name</mat-label>
+        <input formControlName="motherName" matInput placeholder="Mother's Name">
+      </mat-form-field>
+    </div>
+    <div fxLayout="row" fxLayoutGap="5px" fxLayout.sm="column" fxLayout.xs="column">
+      <mat-form-field fxFlex.gt-sm="50" fxFlex.lt-lg="" appearance="outline">
+        <mat-label>Contact</mat-label>
+        <input formControlName="contact" matInput placeholder="Contact">
+      </mat-form-field>
+      <mat-form-field fxFlex.gt-sm="50" fxFlex.lt-lg="" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input formControlName="email" matInput placeholder="Email">
+      </mat-form-field>
+    </div>
+    <div fxLayout="row" fxLayoutGap="5px" fxLayout.sm="column" fxLayout.xs="column">
+      <mat-form-field appearance="outline" fxFlex="100">
+        <mat-label>Address</mat-label>
+        <textarea formControlName="address" matInput></textarea>
+      </mat-form-field>
+    </div>
+  
+</div>
+<div mat-dialog-actions fxLayout fxLayoutAlign="space-between center" >
+  <button mat-button mat-dialog-close>Close</button>
+  <button type="submit" [disabled]="!studentForm.valid || data.mode.toLowerCase() === 'view'" mat-button class="mat-calendar-body-selected">Save</button>
+</div>
+</form>
