@@ -11,15 +11,12 @@ export class DashboardComponent implements OnInit {
   studentCount:number=0;
   constructor(private state:StateService,
     private studentService:StudentService) {
-    
-
     this.getStudentCount();
   }
 
   ngOnInit(): void {
     this.state.onStudentCountChanged.subscribe(
       (res) => {
-        debugger;
         this.studentCount = res;
       }
     );
